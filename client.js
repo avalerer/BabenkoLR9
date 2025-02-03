@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             comments: formData.get("comments"),
         };
 
-        const response = await fetch("http://127.0.0.1:3001/save", {
+        await fetch("http://127.0.0.1:3001/save", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
