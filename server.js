@@ -15,10 +15,10 @@ app.use(cors({
 
 const validateData = (data) => {
     if (!data.name || !data.email || !data.age || !data.interest) {
-        return 'All fields are required';
+        return 'Заповніть необхідні поля';
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-        return 'Invalid email format';
+        return 'Електронна пошта заповнена неправильно';
     }
     return null;
 };
